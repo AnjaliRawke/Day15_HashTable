@@ -12,5 +12,4 @@ public class HashTableMain {
 			System.out.println(word + " : " + table.get(word));
 		}
 	}
-
 }
