@@ -11,8 +11,8 @@ public class HashTableMain {
 		for (String word : words) {
 			table.put(word);
 		}
-		for (
-				LinkedList<MyMapNode> bucket : table.getBuckets()) {
+		table.remove("avoidable");
+		for (LinkedList<MyMapNode> bucket : table.getBuckets()) {
 			if (bucket != null) {
 				for (MyMapNode node : bucket) {
 					System.out.println(node.key + " : " + node.value);

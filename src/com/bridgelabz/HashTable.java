@@ -40,4 +40,18 @@ public class HashTable<K,V> {
 		}
 		bucket.add(new MyMapNode(key, 1));
 	}
+
+	public void remove(String key) {
+		int bucketIndex = hash(key);
+		if (buckets[bucketIndex] == null) {
+			return;
+		}
+		LinkedList<MyMapNode> bucket = buckets[bucketIndex];
+		for (MyMapNode node : bucket) {
+			if (node.key.equals(key)) {
+				bucket.remove(node);
+				return;
+			}
+		}
+	}
 }
